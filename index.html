@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haruy Sushi</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend:
+        {
+          fontFamily: {
+            barlow: ['Barlow', 'sans-serif'],
+          },
+          colors: {
+            primary: '#6f4e37',   // marrom café
+            dark: '#2c1b12',      // marrom escuro
+            muted: '#a68a64',     // bege
+            footer: '#3b2a20',    // marrom profundo
+          }
+        }
+      }
+    }
+  </script>
+
+
+</head>
+
+<body class="bg-[#f5efe6]">
+
+
+
+
+
+  <nav class="bg-primary shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center">
+
+        <div class="flex items-center space-x-3">
+          <img src="./img/logo.png" class="w-29" alt="Logo Haruy Sushi">
+        </div>
+
+
+        <div class="md:hidden flex items-center">
+          <button id="btn-mobile" class="p-2 rounded-md hover:bg-muted/20 transition">
+            <svg class="w-6 h-6 text-white transition" fill="none" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="hidden md:hidden bg-white" id="menu-mobile">
+      <ul>
+        <li>
+          <a href="#cardapio" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-dark transition">
+            Ver Cardápio
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+  <section class="bg-[#fffaf3] py-16">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center">
+
+      <div class="md:w-1/2 text-center md:text-left">
+        <p class="text-2xl font-semibold text-gray-800 mb-4">
+          O Verdadeiro Sabor da Cozinha Japonesa
+        </p>
+        <a href="#cardapio" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-dark transition">
+          Ver Cardápio
+        </a>
+      </div>
+
+      <div class="md:w-1/2 mt-8 md:mt-0">
+        <img src="./img/banner.png" alt="Prato japonês" class="rounded-lg border-5">
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="py-16 bg-[#f5efe6]" id="cardapio">
+    <div class="max-w-4xl mx-auto px-4">
+
+      <h1 class="text-3xl font-bold text-center mb-10 text-primary">Cardápio</h1>
+
+      <!-- Menu Categoria Inicío -->
+      <nav id="nav-categorias" class="overflow-x-auto whitespace-nowrap 
+      snap-x flex gap-2 mt-6 pb-1">
+
+        <button data-cat="cafes" class="snap-start px-4 py-1 rounded-full 
+        bg-primary text-white font-bold text-sm transition-transform 
+        duration-150 cursor-pointer flex-shrink-0 btn-cat">
+          Cafés Clássicos
+        </button>
+
+        <button data-cat="lanches" class="snap-start px-4 py-1 rounded-full 
+        bg-primary text-white font-bold text-sm transition-transform 
+        duration-150 cursor-pointer flex-shrink-0 btn-cat">
+          Lanches Artesanais
+        </button>
+
+        <button data-cat="doces" class="snap-start px-4 py-1 rounded-full 
+        bg-primary text-white font-bold text-sm transition-transform 
+        duration-150 cursor-pointer flex-shrink-0 btn-cat">
+          Doces & Sobremesas
+        </button>
+
+        <button data-cat="Bebidas" class="snap-start px-4 py-1 rounded-full 
+        bg-primary text-white font-bold text-sm transition-transform 
+        duration-150 cursor-pointer flex-shrink-0 btn-cat">
+          Bebidas Especiais
+        </button>
+
+      </nav>
+      <!-- Menu Categoria Fim -->
+
+
+
+
+
+
+
+      <!-- Categoria: Cafés Classicos -->
+      <div id="cat-cafes" class="categoria-conteudo">
+
+        <h2 class="text-xl font-semibold mb-4">Cafés Clássicos</h2>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Espresso Tradicional</h3>
+            <span class="text-primary font-semibold">R$ 6,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Café encorpado e intenso, extraído na hora.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Cappuccino Cremoso</h3>
+            <span class="text-primary font-semibold">R$ 14,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Espresso com leite vaporizado e espuma aveludada.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Latte Caramelo</h3>
+            <span class="text-primary font-semibold">R$ 16,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Café suave com leite e toque de caramelo.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Mocha Especial</h3>
+            <span class="text-primary font-semibold">R$ 32,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Espresso com chocolate e leite cremoso.
+          </p>
+        </div>
+      </div>
+
+
+
+      <!-- Categoria: Lanches -->
+      <div id="cat-lanches" class="categoria-conteudo hidden">
+        <h2 class="text-xl font-semibold mt-10 mb-4">Lanches Artesanais</h2>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Croissant Misto Quente</h3>
+            <span class="text-primary font-semibold">R$ 19,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Croissant amanteigado com presunto e queijo.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Toast de Abacate</h3>
+            <span class="text-primary font-semibold">R$ 24,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Pão rústico com pasta de abacate temperada.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Sanduíche Natural</h3>
+            <span class="text-primary font-semibold">R$ 22,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Frango desfiado, alface e creme leve.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Pão de Queijo Mineiro</h3>
+            <span class="text-primary font-semibold">R$ 9,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Tradicional, macio por dentro e crocante por fora.
+          </p>
+        </div>
+      </div>
+
+
+
+
+
+      <!-- Categoria: Doces e Sobremesas -->
+      <div id="cat-doces" class="categoria-conteudo">
+
+        <h2 class="text-xl font-semibold mb-4">Doces & Sobremesas</h2>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Cheesecake de Frutas Vermelhas</h3>
+            <span class="text-primary font-semibold">R$ 18,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Base crocante com creme leve e calda artesanal.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Brownie com Sorvete</h3>
+            <span class="text-primary font-semibold">R$ 22,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Brownie quente servido com sorvete de baunilha.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Torta de Limão</h3>
+            <span class="text-primary font-semibold">R$ 16,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Recheio cremoso com cobertura levemente dourada.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Cookie Artesanal</h3>
+            <span class="text-primary font-semibold">R$ 8,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Biscoito macio com gotas de chocolate.
+          </p>
+        </div>
+      </div>
+
+
+
+
+
+      <!-- Categoria: Bebidas Especiais -->
+      <div id="cat-Bebidas" class="categoria-conteudo">
+
+        <h2 class="text-xl font-semibold mt-10 mb-4">Bebidas Especiais</h2>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Chocolate Quente Cremoso</h3>
+            <span class="text-primary font-semibold">R$ 15,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Chocolate intenso com leite vaporizado.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Chá Gelado Natural</h3>
+            <span class="text-primary font-semibold">R$ 12,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Refrescante, sabor limão ou pêssego.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Suco Natural</h3>
+            <span class="text-primary font-semibold">R$ 14,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Feito na hora, laranja, abacaxi ou maracujá.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Frappé de Café</h3>
+            <span class="text-primary font-semibold">R$ 20,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Café gelado batido com gelo e chantilly.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+  <footer class="mt-[100px] text-center p-[50px] text-sm text-white bg-footer">
+    <h3 class="font-bold text-lg">Haruy Sushi</h3>
+    <p class="my-[3px]">Rua Prof. Toledo, 500 Centro - Sorocaba</p>
+    <p class="my-[3px]">WhatsApp: (15) 98766-4321</p>
+    <p class="my-[3px]">Aberto todos os dias, das 14h às 23h</p>
+  </footer>
+
+  <!-- Botão Flutuante WatsApp -->
+  <a href="https://wa.me/5515987664321" target="_blank" class="fixed right-6 bottom-5">
+    <img src="./img/whatsapp.png" alt="link do whatsapp" class="h-[60px]">
+  </a>
+
+
+
+
+
+
+
+
+
+  <script>
+    const btn = document.getElementById('btn-mobile');
+    const menu = document.getElementById('menu-mobile');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+
+  <!-- Script Para Botão Categoria -->
+  <script>
+    const botoes = document.querySelectorAll('.btn-cat');
+    const conteudos = document.querySelectorAll('.categoria-conteudo');
+
+    function mudarCategoria(cat) {
+      conteudos.forEach(div => {
+        div.id === 'cat-' + cat
+          ? div.classList.remove('hidden')
+          : div.classList.add('hidden');
+      });
+
+      botoes.forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.classList.add('bg-primary', 'text-white');
+          btn.classList.remove('bg-[#ebebeb]', 'text-dark');
+        } else {
+          btn.classList.remove('bg-primary', 'text-white');
+          btn.classList.add('bg-[#ebebeb]', 'text-dark');
+        }
+      });
+    }
+
+
+
+    // // Adiciona Eventos a Cada Botão
+    // botoes.forEach(btn => {
+    //   btn.addEventListener('touchstart', () => {
+    //     btn.classList.add('scale-95');
+    //     mudarCategoria(btn.dataset.cat);
+    //   });
+    //   btn.addEventListener('touchend', () => {
+    //     btn.classList.remove('scale-95');
+    //   });
+    //   btn.addEventListener('click', () => {
+    //     mudarCategoria(btn.dataset.cat);
+    //   });
+    // });
+
+
+
+
+    // Ativar scroll suave para links internos
+    let startX = 0;
+    let startY = 0;
+
+    // Evento de cada botão
+    botoes.forEach(btn => {
+      // touchstart é disparado assim que o dedo toca a tela
+      btn.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        // Aplica class tailwild para efeito de clique
+        btn.classList.add('scale-95', 'opacity-80')
+      });
+      // Touched quando tira o dedo da tela
+      btn.addEventListener('touchend', (e) => {
+        // Remove efeito visual
+        btn.classList.remove('scale-95', 'opacity-80')
+        // Ultima posição do dedo antes de levantar
+        const endX = e.changedTouches[0].clientX;
+        const endY = e.changedTouches[0].clientY;
+        // Calcula distância percorrida pelo dedo em pixels
+        const deltaX = Math.abs(endX - startX);
+        const deltaY = Math.abs(endY - startY);
+        // Lógica matemática se move menos de 10px = clique intensional 
+        if (deltaX < 10 && deltaY < 10) {
+          mudarCategoria(btn.dataset.cat);
+        }
+      });
+      // Touchcancel se o celular aparecer uma ligação ou notificação popup
+      btn.addEventListener('touchcancel', () => {
+        btn.classList.remove('scale-95', 'opacity-80');
+      });
+      // Click para usuários desktop
+      btn.addEventListener('click', () => {
+        mudarCategoria(btn.dataset.cat);
+      });
+    });
+
+
+  </script>
+
+
+</body>
+
+</html>
